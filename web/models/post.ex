@@ -7,7 +7,7 @@ defmodule BlogPhoenix.Post do
     field :title, :string
     field :body, :string
 
-    has_many :comments, BlogPhoenix.Comment
+    has_many :comments, BlogPhoenix.Comment, on_delete: :delete_all
 
     timestamps
   end
